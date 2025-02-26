@@ -13,6 +13,7 @@ export class CityListComponent implements OnInit {
 
   ngOnInit(): void {
     this.hotelService.getCities().subscribe(data => {
+      console.log("Données des villes reçues :", data);
       this.cities = data;
     });
   }

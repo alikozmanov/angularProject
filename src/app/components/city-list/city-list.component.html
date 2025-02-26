@@ -3,7 +3,11 @@
   <div class="row">
     <div *ngFor="let city of cities" class="col-md-4 mb-4">
       <div class="card shadow-sm border-light">
-        <img [src]="city.imageUrl" class="card-img-top" alt="{{ city.name }}" style="height: 200px; object-fit: cover;">
+        <img [src]="'http://localhost:8080' + city.imageUrl" class="card-img-top">
+        
+        <!-- interpolation pour afficher l'URL directement dans le HTML/ Ensuite copie-colle l'URL dans ton navigateur -->
+        <p>{{ 'http://localhost:8080/img/' + city.image }}</p>
+
         <div class="card-body">
           <h5 class="card-title text-center">{{ city.name }}</h5>
           <a [routerLink]="['/hotels', city.id]" class="btn btn-primary w-100">Voir les hôtels</a>

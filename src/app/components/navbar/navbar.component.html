@@ -11,21 +11,14 @@
           <a class="nav-link" routerLink="/">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/hotels">Hôtels</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" routerLink="/contact">Contact</a>
         </li>
       </ul>
-
       <!-- Barre de recherche -->
       <form class="d-flex ms-3" role="search" (submit)="onSearch($event)">
         <input class="form-control me-2" [(ngModel)]="searchKeyword" name="search" type="search" placeholder="Recherche hôtel..." aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Rechercher</button>
       </form>
-
-
-
     </div>
   </div>
 </nav>
