@@ -8,18 +8,26 @@ import { HotelService } from 'src/app/services/hotel.service';
   styleUrls: ['./hotel-list.component.css']
 })
 export class HotelListComponent implements OnInit {
-  hotels: any[] = [];
-  cityName: string = '';
+  hotels: any[] = []; // Liste des hôtels trouvés
+  cityName: string = ''; // Nom du mot-clé recherché
 
-  constructor(private route: ActivatedRoute, private hotelService: HotelService) {}
+  constructor(private hotelService: HotelService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const cityId = this.route.snapshot.paramMap.get('cityId');
-    if (cityId) {
-      this.hotelService.getHotelsByCity(+cityId).subscribe(data => {
-        this.hotels = data.hotels;
-        this.cityName = data.name;
-      });
-    }
+    // Récupérer le mot-clé depuis les queryParams de l'URL
+    this.route.queryParams.subscribe(params => {
+      const keyword = params['keyword'];  // 'keyword' est le paramètre de l'URL
+      if (keyword) {
+        this.cityName = keyword;  // Utiliser le mot-clé comme nom de la ville
+        this.searchHotels(keyword);  // Appeler la méthode pour effectuer la recherche
+      }
+    });
+  }
+
+  // Méthode pour effectuer la recherche des hôtels par mot-clé
+  searchHotels(keyword: string): void {
+    this.hotelService.searchHotels(keyword).subscribe(data => {
+      this.hotels = data;  // Remplir la liste des hôtels avec les résultats
+    });
   }
 }

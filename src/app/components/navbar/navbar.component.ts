@@ -11,12 +11,14 @@ export class NavbarComponent {
 
   constructor(private hotelService: HotelService) {}
 
-  onSearch(event: Event) {
-    event.preventDefault();  // Empêche le rechargement de la page lors de la soumission du formulaire
-    if (this.searchKeyword.trim()) {
-      this.hotelService.searchHotels(this.searchKeyword).subscribe(hotels => {
-        console.log(hotels);  // Affiche les hôtels recherchés dans la console (à remplacer par un affichage dans la page)
-      });
-    }
+onSearch(event: Event) {
+  event.preventDefault();  // Empêche le rechargement de la page
+  console.log("Recherche avec le mot-clé : ", this.searchKeyword);  // Vérifiez la valeur du mot-clé
+  if (this.searchKeyword.trim()) {
+    this.hotelService.searchHotels(this.searchKeyword).subscribe(hotels => {
+      console.log("Résultats des hôtels : ", hotels);  // Vérifiez les résultats
+    });
   }
+}
+
 }
