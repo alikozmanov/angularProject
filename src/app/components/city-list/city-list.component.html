@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <h2>Liste des Villes</h2>
+  <div class="row">
+    <div *ngFor="let city of cities" class="col-md-4">
+      <div class="card">
+        <img [src]="city.imageUrl" class="card-img-top" alt="{{ city.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ city.name }}</h5>
+          <a [routerLink]="['/hotels', city.id]" class="btn btn-primary">Voir les hôtels</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

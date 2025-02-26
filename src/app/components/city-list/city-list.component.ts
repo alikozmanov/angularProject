@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+import { HotelService } from 'src/app/services/hotel.service';
+
+@Component({
+  selector: 'app-city-list',
+  templateUrl: './city-list.component.html',
+  styleUrls: ['./city-list.component.scss']
+})
+export class CityListComponent implements OnInit {
+  cities: any[] = [];
+
+  constructor(private hotelService: HotelService) {}
+
+  ngOnInit(): void {
+    this.hotelService.getCities().subscribe(data => {
+      this.cities = data;
+    });
+  }
+}
