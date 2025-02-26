@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HotelService } from 'src/app/services/hotel.service'; // Assure-toi que le service est bien importé
+import { HotelService } from 'src/app/services/hotel.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,10 +13,10 @@ export class NavbarComponent {
 
 onSearch(event: Event) {
   event.preventDefault();  // Empêche le rechargement de la page
-  console.log("Recherche avec le mot-clé : ", this.searchKeyword);  // Vérifiez la valeur du mot-clé
+  console.log("Recherche avec le mot-clé : ", this.searchKeyword);
   if (this.searchKeyword.trim()) {
     this.hotelService.searchHotels(this.searchKeyword).subscribe(hotels => {
-      console.log("Résultats des hôtels : ", hotels);  // Vérifiez les résultats
+      console.log("Résultats des hôtels : ", hotels);
     });
   }
 }

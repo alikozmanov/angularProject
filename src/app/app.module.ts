@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

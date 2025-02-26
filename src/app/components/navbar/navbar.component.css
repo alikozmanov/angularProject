@@ -13,10 +13,10 @@
   color: #fff;
   text-transform: uppercase;
   text-align: center;
-  width: 100%; /* Assurez-vous que l'élément prend toute la largeur */
+  width: 100%;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Centrage parfait */
+  transform: translateX(-50%);
 }
 
 /* Liens de la navbar */
@@ -83,6 +83,9 @@
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1.4rem;
+    position: relative;
+    transform: none;
+    text-align: left; /* Aligner à gauche */
   }
 
   .navbar-nav .nav-link {
