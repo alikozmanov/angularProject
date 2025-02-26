@@ -11,6 +11,7 @@ h2 {
 }
 
 .card {
+ border: 2px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
@@ -37,8 +38,7 @@ h2 {
 }
 
 .btn-info {
-  background-color: #17a2b8;
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-weight: bold;
 }

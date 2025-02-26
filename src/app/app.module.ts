@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CityListComponent } from './components/city-list/city-list.component';
 import { HotelListComponent } from './components/hotel-list/hotel-list.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CityListComponent,
-    HotelListComponent
+    HotelListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
