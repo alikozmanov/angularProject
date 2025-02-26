@@ -5,7 +5,7 @@ import { HotelService } from 'src/app/services/hotel.service';
 @Component({
   selector: 'app-hotel-list',
   templateUrl: './hotel-list.component.html',
-  styleUrls: ['./hotel-list.component.scss']
+  styleUrls: ['./hotel-list.component.css']
 })
 export class HotelListComponent implements OnInit {
   hotels: any[] = [];

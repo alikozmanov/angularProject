@@ -1,0 +1,60 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #343a40;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #495057;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.w-100 {
+  width: 100%;
+}
