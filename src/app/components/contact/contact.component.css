@@ -1,0 +1,81 @@
+/* Centrer le bloc contact et le remonter un peu */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding-bottom: 20px;
+}
+
+/* Style de la carte de contact */
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol de la carte */
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Style des informations de contact */
+.contact-info {
+  margin-top: 20px;
+}
+
+/* Alignement des éléments de contact */
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Icônes */
+.contact-item i {
+  font-size: 22px;
+  color: #007bff;
+  margin-right: 10px;
+}
+
+/* Texte en gras */
+.contact-item span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Liens et texte */
+.contact-item a,
+.contact-item p {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Effet au survol des liens */
+.contact-item a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Bouton stylisé */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Effet au survol du bouton */
+.btn-primary:hover {
+  background-color: #0056b3;
+}

@@ -7,13 +7,15 @@ import { CityListComponent } from './components/city-list/city-list.component';
 import { HotelListComponent } from './components/hotel-list/hotel-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CityListComponent,
     HotelListComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
