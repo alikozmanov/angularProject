@@ -1,60 +1,96 @@
+/* Style de la container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px; /* Espacement supplémentaire */
 }
 
+/* Titre centré */
 h2 {
   color: #343a40;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center; /* Centrer le titre */
+  margin-bottom: 2rem;
+  letter-spacing: 2px; /* Espacement des lettres pour un effet plus élégant */
 }
 
+/* Styles des cartes */
 .card {
- border: 2px solid #ddd;
+  border: 2px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
+/* Effet de survol des cartes */
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Titre des cartes */
 .card-title {
   font-size: 1.25rem;
   font-weight: bold;
   color: #007bff;
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }
 
+/* Texte des cartes */
 .card-text {
   font-size: 1rem;
   color: #495057;
+  margin-bottom: 8px; /* Espacement entre les lignes */
 }
 
+/* Corps de la carte */
 .card-body {
   padding: 20px;
 }
 
+/* Style du bouton */
 .btn-info {
   color: black;
   text-transform: uppercase;
   font-weight: bold;
+  background-color: #FFDD57;
+  border: 2px solid #FFDD57;
 }
 
 .btn-info:hover {
   background-color: #138496;
+  color: white;
 }
 
+/* Espacement sous chaque carte */
 .mb-4 {
   margin-bottom: 1.5rem;
 }
 
+/* Espacement supérieur */
 .mt-4 {
   margin-top: 2rem;
 }
 
+/* Boutons étendus */
 .w-100 {
   width: 100%;
+}
+
+/* Media query pour les petits écrans (mobile et tablette) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Réduire la taille du titre pour mobile */
+  }
+
+  .card {
+    margin-bottom: 20px; /* Espacement plus grand pour les cartes */
+  }
 }

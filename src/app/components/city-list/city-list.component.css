@@ -11,7 +11,7 @@ h2 {
 }
 
 .card {
-  border: 2px solid #ddd;  /* Ajout d'une bordure autour des cartes */
+  border: 2px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
@@ -26,7 +26,7 @@ h2 {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-bottom: 2px solid #ddd; /* Bordure sous l'image */
+  border-bottom: 2px solid #ddd;
 }
 
 .card-body {
@@ -47,7 +47,7 @@ h2 {
   color: black;
   text-transform: uppercase;
   font-weight: bold;
-  border: none; /* Retire la bordure par défaut du bouton */
+  border: none;
 }
 
 .btn-primary:hover {

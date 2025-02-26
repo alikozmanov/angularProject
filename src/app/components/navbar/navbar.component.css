@@ -1,17 +1,36 @@
+/* Style de la navbar */
 .navbar {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
+  padding: 15px 0;
+  background-color: #007BFF;
+  position: relative;
 }
 
+/* Centrer le texte de la navbar */
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%; /* Assurez-vous que l'élément prend toute la largeur */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centrage parfait */
 }
 
+/* Liens de la navbar */
 .navbar-nav .nav-link {
   font-size: 1.1rem;
+  color: #fff;
+  margin-left: 15px;
   padding: 8px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFDD57;
+  text-decoration: none;
 }
 
 .navbar-nav {
@@ -27,28 +46,59 @@
   border: none;
 }
 
-.navbar-nav  {
-padding-bottom: 10px;
-  margin-left: 0;
+.navbar-toggler-icon {
+  background-color: #fff;
 }
 
+/* Barre de recherche */
 .form-control {
-  width: 250px;
-  border-radius: 20px;
+  width: 280px;
+  border-radius: 25px;
+  padding: 8px 12px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.75);
+  border-color: #007BFF;
 }
 
 .btn-outline-light {
-  border-radius: 20px;
+  border-radius: 25px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  background-color: #FFDD57;
+  color: #007BFF;
+  border-color: #FFDD57;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.form-inline {
-  margin-left: 15px;
+.btn-outline-light:hover {
+  background-color: #007BFF;
+  color: #fff;
 }
 
-/* Media Query */
+/* Média Query pour mobile */
 @media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+
   .form-control {
-    width: 180px;
+    width: 220px;
+  }
+
+  .btn-outline-light {
+    padding: 6px 12px;
+  }
+
+  /* Cacher la recherche sur petits écrans */
+  .form-inline {
+    display: none;
   }
 }
-
