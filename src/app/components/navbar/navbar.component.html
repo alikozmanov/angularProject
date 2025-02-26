@@ -19,10 +19,11 @@
       </ul>
 
       <!-- Barre de recherche -->
-      <form class="d-flex ms-3" role="search">
-        <input class="form-control me-2" type="search" placeholder="Recherche hôtel..." aria-label="Search">
+      <form class="d-flex ms-3" role="search" (submit)="onSearch($event)">
+        <input class="form-control me-2" [(ngModel)]="searchKeyword" type="search" placeholder="Recherche hôtel..." aria-label="Search">
         <button class="btn btn-outline-light" type="submit">Rechercher</button>
       </form>
+
     </div>
   </div>
 </nav>

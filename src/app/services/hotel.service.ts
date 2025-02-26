@@ -17,4 +17,8 @@ export class HotelService {
   getHotelsByCity(cityId: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/cities/${cityId}`);
   }
+ // Méthode pour rechercher les hôtels par mot-clé
+  searchHotels(keyword: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/hotels/search?keyword=${keyword}`);
+  }
 }

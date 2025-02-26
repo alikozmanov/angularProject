@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CityListComponent } from './components/city-list/city-list.component';
 import { HotelListComponent } from './components/hotel-list/hotel-list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
