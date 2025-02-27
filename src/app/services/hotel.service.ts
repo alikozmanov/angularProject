@@ -10,15 +10,15 @@ export class HotelService {
 
   constructor(private http: HttpClient) { }
 
-  getCities(): Observable<any> {
+// Récupérer la liste des villes depuis une API
+  getCities(): Observable<any> { //  permet de récupérer des données
     return this.http.get(`${this.apiUrl}/cities`);
   }
 
-// Dans le service
-getHotelsByCity(cityId: number): Observable<any> {
-  return this.http.get(`${this.apiUrl}/cities/${cityId}`);
-}
-
+// Récupérer les hôtels d'une ville
+  getHotelsByCity(cityId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/cities/${cityId}`);
+  }
  // Méthode pour rechercher les hôtels par mot-clé
   searchHotels(keyword: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/hotels/search?keyword=${keyword}`);

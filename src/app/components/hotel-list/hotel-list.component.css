@@ -5,16 +5,10 @@
   padding: 0 15px;
 }
 
-.card-body a {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
-}
-
 /* Titre centré */
 h2 {
   color: #343a40;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -28,6 +22,8 @@ h2 {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  height: 100%;
+  margin-bottom: 15px;
 }
 
 /* Effet de survol des cartes */
@@ -36,25 +32,34 @@ h2 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre des cartes */
-.card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #007bff;
-  text-transform: capitalize;
-  margin-bottom: 10px;
-}
-
-/* Texte des cartes */
-.card-text {
-  font-size: 1rem;
-  color: #495057;
-  margin-bottom: 8px;
+/* Style de l'image de la carte (hôtel) */
+.card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
 }
 
 /* Corps de la carte */
 .card-body {
-  padding: 20px;
+  padding: 10px;
+}
+
+/* Titre des cartes */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #007bff;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Texte des cartes */
+.card-text {
+  font-size: 0.9rem;
+  color: #495057;
+  margin-bottom: 5px;
 }
 
 /* Style du bouton */
@@ -62,11 +67,11 @@ h2 {
   color: black;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 6px 15px;
+  padding: 6px 10px;
   font-size: 1rem;
   border-radius: 20px;
   display: inline-block;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 
 /* Effet au survol des boutons */
@@ -74,8 +79,6 @@ h2 {
   background-color: #FFDD57;
   color: white;
 }
-
-
 
 /* Espacement sous chaque carte */
 .mb-4 {
@@ -92,17 +95,33 @@ h2 {
   width: 100%;
 }
 
-/* Media query */
+/* Pour les écrans plus larges, ajuster la taille des cartes */
 @media (max-width: 768px) {
-  .container {
-    padding: 0 10px;
+  .card-img-top {
+    height: 120px;
   }
 
-  h2 {
-    font-size: 1.8rem;
+  .card-body {
+    padding: 8px;
   }
 
-  .card {
-    margin-bottom: 20px;
+  .card-title {
+    font-size: 1rem;
   }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Disposition des cartes en ligne (côte à côte) */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Pour 5 cartes par ligne */
+.col-2.4 {
+  flex: 0 0 19%;
 }

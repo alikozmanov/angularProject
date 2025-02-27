@@ -16,7 +16,7 @@ import { ContactComponent } from './components/contact/contact.component';
     CityListComponent,
     HotelListComponent,
     NavbarComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
