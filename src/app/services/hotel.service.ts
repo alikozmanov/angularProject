@@ -6,21 +6,44 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HotelService {
-  private apiUrl = 'http://localhost:8080/api';  // Api back-end
+  private apiUrl = 'http://localhost:8080/api';
 
   constructor(private http: HttpClient) { }
 
-// Récupérer la liste des villes depuis une API
-  getCities(): Observable<any> { //  permet de récupérer des données
+  getCities(): Observable<any> {
     return this.http.get(`${this.apiUrl}/cities`);
   }
 
-// Récupérer les hôtels d'une ville
   getHotelsByCity(cityId: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/cities/${cityId}`);
   }
- // Méthode pour rechercher les hôtels par mot-clé
+
   searchHotels(keyword: string): Observable<any> {
     return this.http.get(`${this.apiUrl}/hotels/search?keyword=${keyword}`);
+  }
+
+  // Supprimer la duplication ici
+  deleteHotel(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/hotels/${id}`);
+  }
+
+  // Récupérer tous les hôtels
+  getHotels(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/hotels`);
+  }
+
+  // Récupérer un hôtel par ID
+  getHotelById(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/hotels/${id}`);
+  }
+
+  // Ajouter un nouvel hôtel
+  addHotel(hotel: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/hotels`, hotel);
+  }
+
+  // Modifier un hôtel existant
+  updateHotel(id: number, hotel: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/hotels/${id}`, hotel);
   }
 }

@@ -1,0 +1,42 @@
+<div class="container mt-4">
+  <h2 class="text-center">{{ isEditing ? 'Modifier' : 'Ajouter' }} un hôtel</h2>
+
+  <form (submit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Nom</label>
+      <input type="text" class="form-control" [(ngModel)]="hotel.name" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Adresse</label>
+      <input type="text" class="form-control" [(ngModel)]="hotel.address" name="address" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nombre d'étoiles</label>
+      <input type="number" class="form-control" [(ngModel)]="hotel.stars" name="stars" min="1" max="5" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Prix Minimum (€)</label>
+      <input type="number" class="form-control" [(ngModel)]="hotel.priceMin" name="priceMin" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Téléphone</label>
+      <input type="text" class="form-control" [(ngModel)]="hotel.phone" name="phone" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nombre de chambres</label>
+      <input type="number" class="form-control" [(ngModel)]="hotel.rooms" name="rooms" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">URL de l'image</label>
+      <input type="text" class="form-control" [(ngModel)]="hotel.imageUrl" name="imageUrl">
+    </div>
+
+    <button type="submit" class="btn btn-success">{{ isEditing ? 'Modifier' : 'Ajouter' }}</button>
+  </form>
+</div>

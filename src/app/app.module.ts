@@ -8,6 +8,7 @@ import { HotelListComponent } from './components/hotel-list/hotel-list.component
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './components/contact/contact.component';
+import { HotelFormComponent } from './components/hotel-form/hotel-form.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ContactComponent } from './components/contact/contact.component';
     HotelListComponent,
     NavbarComponent,
     ContactComponent,
+    HotelFormComponent,
   ],
   imports: [
     BrowserModule,

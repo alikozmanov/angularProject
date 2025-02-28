@@ -1,13 +1,10 @@
 <div class="container mt-4">
-  <h2 class="text-center mb-4">Hôtels à {{ cityName }}</h2>
+  <h2 class="text-center mb-4">Liste des Hôtels à {{ cityName }}</h2>
 
   <div *ngIf="hotels.length > 0" class="row">
     <div *ngFor="let hotel of hotels" class="col-2.4 mb-4">
       <div class="card shadow-sm border-light">
-
-        <!-- Ajout de l'image de l'hôtel -->
         <img [src]="'http://localhost:8080' + hotel.imageUrl" class="card-img-top" style="height:150px; object-fit: cover; border-bottom: 2px solid #ddd;">
-
         <div class="card-body">
           <h5 class="card-title">{{ hotel.name }}</h5>
           <p class="card-text"><strong>Adresse:</strong> {{ hotel.address }}</p>
@@ -15,8 +12,10 @@
           <p class="card-text"><strong>Prix min:</strong> {{ hotel.priceMin }}€</p>
           <p class="card-text"><strong>Contact:</strong> {{ hotel.phone }}</p>
           <p class="card-text"><strong>Chambres:</strong> {{ hotel.rooms }}</p>
-          <a href="#" class="btn btn-info w-100 mt-3">Retour</a>
-          <a href="/" class="btn btn-info w-100 mt-3">Réserver</a>
+
+          <!-- Boutons d'édition et de suppression -->
+          <a [routerLink]="['/hotels/edit', hotel.id]" class="btn btn-warning w-100 mt-3">Modifier</a>
+          <button (click)="deleteHotel(hotel.id)" class="btn btn-danger w-100 mt-3">Supprimer</button>
         </div>
       </div>
     </div>
