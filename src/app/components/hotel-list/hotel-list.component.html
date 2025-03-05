@@ -14,7 +14,7 @@
           <p class="card-text"><strong>Chambres:</strong> {{ hotel.rooms }}</p>
 
           <!-- Boutons d'édition et de suppression -->
-          <a [routerLink]="['/hotels/edit', hotel.id]" class="btn btn-warning w-100 mt-3">Modifier</a>
+          <button [routerLink]="['/hotels/edit', hotel.id]" class="btn btn-warning w-100 mt-3">Modifier</button>
           <button (click)="deleteHotel(hotel.id)" class="btn btn-danger w-100 mt-3">Supprimer</button>
         </div>
       </div>
